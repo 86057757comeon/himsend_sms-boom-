@@ -33,6 +33,7 @@ if __name__ == "__main__":
         for key, items in dicts.items():
             sendsms(key, items[0], items[1], items[2])
 
-            time.sleep(60)
+        time.sleep(60)
+
 
 
