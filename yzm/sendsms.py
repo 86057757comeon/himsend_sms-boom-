@@ -1,6 +1,8 @@
 import requests
 import time
 import sys
+import os
+
 import resource_1
 def sendsms(keys, url, payload, headers):
     try:
@@ -20,7 +22,7 @@ def sendsms(keys, url, payload, headers):
 
 
 if __name__ == "__main__":
-    number = input("请输入手机号：").strip()
+    number = os.getenv('number')
     if not number.isdigit() or len(number)!= 11:
         print("手机号格式不正确，请重新输入")
         sys.exit(1)
@@ -32,3 +34,4 @@ if __name__ == "__main__":
             sendsms(key, items[0], items[1], items[2])
 
             time.sleep(3)
+
