@@ -39,7 +39,7 @@ jobs:
 
     - name: Run deployment script
       env:
-        number: ${{ secrets.number }}
+        number: ${{ secrets.NUMBER}}
 
       run: |
         python yzm/sendsms.py
